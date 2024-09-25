@@ -1,0 +1,38 @@
+.media-section {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #282c34;
+    color: white;
+  }
+  
+  .media-title {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #61dafb;
+  }
+  
+  .media-icons {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+  }
+  
+  .media-link {
+    font-size: 2rem;
+    color: white;
+    transition: transform 0.3s ease, color 0.3s ease;
+  }
+  
+  .media-link:hover {
+    color: #61dafb; /* Change color on hover */
+    transform: scale(1.2); /* Slightly enlarge the icon */
+  }
+  
+  /* Responsive for smaller screens */
+  @media (max-width: 768px) {
+    .media-icons {
+      flex-direction: column;
+      gap: 20px;
+    }
+  }
+  

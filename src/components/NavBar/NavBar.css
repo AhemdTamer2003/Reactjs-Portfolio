@@ -1,0 +1,141 @@
+/* NavBar.css */
+
+/* Overall Navbar Styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background: rgba(255, 255, 255, 0.8); /* Light glassmorphism effect */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+    backdrop-filter: blur(10px); /* Glassmorphism blur */
+    border-radius: 10px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* On scroll, darken the background */
+  .navbar:hover {
+    background: rgba(255, 255, 255, 0.95);
+  }
+  
+  /* Logo Container */
+  .logo-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Shadow for the logo */
+    transition: transform 0.2s ease;
+  }
+  
+  .logo:hover {
+    transform: rotate(360deg); /* Logo spin on hover */
+  }
+  
+  /* Animated Text */
+  .animated-text {
+    margin-left: 15px;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #333;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .front-end-text {
+    animation: slide-in 1s ease-in-out infinite alternate;
+    color: #007bff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Add a nice shadow for depth */
+  }
+  
+  @keyframes slide-in {
+    from {
+      transform: translateY(-10px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  /* Navigation Links */
+  .desktopMenu a {
+    margin: 0 20px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-decoration: none;
+    color: #333;
+    position: relative;
+    transition: color 0.001s ease;
+  }
+  
+  .desktopMenu a:hover {
+    color: #007bff;
+  }
+  
+  /* Add an underline effect on hover */
+  .desktopMenu a::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #007bff;
+    left: 0;
+    bottom: -5px;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.4s ease;
+  }
+  
+  .desktopMenu a:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+  
+  /* Contact Button */
+  .desktopmenubtn {
+    background: linear-gradient(45deg, #007bff, #00d4ff);
+    color: #fff;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .desktopmenubtn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+  }
+  
+  .desktopmenubtn:focus {
+    outline: none;
+  }
+  
+  /* Add responsiveness */
+  @media (max-width: 768px) {
+    .desktopMenu {
+      display: none;
+    }
+  
+    .navbar {
+      flex-direction: column;
+    }
+  
+    .desktopmenubtn {
+      margin-top: 15px;
+    }
+  }
+  

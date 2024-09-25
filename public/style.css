@@ -1,0 +1,20 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    /* Removed background: transparent */
+}
+
+body {
+    background-color: rgb(30, 30, 30);  /* Consistent naming convention (background-color) */
+    color: white;
+    font-family: 'Arial', sans-serif;  /* Add a default font family */
+    overflow-y: scroll;  /* Scroll vertically only */
+    overflow-x: hidden;  /* Hide horizontal overflow to prevent unwanted scrollbars */
+}
+
+/* Optionally, apply scroll-behavior for smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}

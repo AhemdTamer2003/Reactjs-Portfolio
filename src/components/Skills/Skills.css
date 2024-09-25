@@ -1,0 +1,95 @@
+/* General section styling */
+.skills-section {
+    padding: 60px 20px;
+    background: linear-gradient(135deg, #f8f9fa, #e9ecef); /* Light gradient background */
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Shadow around the section */
+    border-radius: 15px;
+}
+
+.skills-title {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 40px;
+    color: #343a40; /* Dark color for title */
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2); /* Slight text-shadow */
+}
+
+/* Skills container */
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Individual skill box */
+.skill {
+    width: 100%;
+    max-width: 300px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Shadow for individual skill cards */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 2px solid rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+/* Hover effect for skill boxes */
+.skill:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Skill name styling */
+.skill-name {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #007bff; /* Highlighted skill names */
+}
+
+/* Progress bar container */
+.progress-bar {
+    height: 20px;
+    background-color: #e9ecef;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+/* Animated progress */
+.progress {
+    height: 100%;
+    background: linear-gradient(135deg, #007bff, #00d4ff); /* Gradient fill */
+    border-radius: 20px 0 0 20px;
+    box-shadow: 0 4px 10px rgba(0, 123, 255, 0.4); /* Subtle shadow */
+    transition: width 1s ease-in-out; /* Smooth progress animation */
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 10px;
+}
+
+/* Progress label */
+.progress-label {
+    color: white;
+    font-weight: bold;
+    font-size: 0.9rem;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2); /* Shadow for readability */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .skills-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .skill {
+        max-width: 100%;
+    }
+}
